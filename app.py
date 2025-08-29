@@ -19,7 +19,7 @@ cursor = db.cursor()
 # Route for form
 @app.route('/')
 def index():
-    return render_template('form.html')
+    return render_template('index.html')
 
 # Route to insert data
 @app.route('/add_employee', methods=['POST'])
