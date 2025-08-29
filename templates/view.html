@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee List</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        table { border-collapse: collapse; width: 100%; }
+        th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+        th { background: #f2f2f2; }
+        tr:hover { background: #f9f9f9; }
+        a { text-decoration: none; color: blue; }
+    </style>
+</head>
+<body>
+    <h2>Employee Records</h2>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Gender</th>
+            <th>Birth Date</th>
+            <th>Hire Date</th>
+            <th>Job Title</th>
+            <th>Department</th>
+            <th>Salary</th>
+            <th>Email</th>
+            <th>Phone</th>
+        </tr>
+        {% for emp in employee %}
+        <tr>
+            <td>{{ emp[0] }}</td>
+            <td>{{ emp[1] }}</td>
+            <td>{{ emp[2] }}</td>
+            <td>{{ emp[3] }}</td>
+            <td>{{ emp[4] }}</td>
+            <td>{{ emp[5] }}</td>
+            <td>{{ emp[6] }}</td>
+            <td>{{ emp[7] }}</td>
+            <td>{{ emp[8] }}</td>
+            <td>{{ emp[9] }}</td>
+            <td>{{ emp[10] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <br>
+    <a href="/">➕ Add New Employee</a>
+</body>
+</html>
